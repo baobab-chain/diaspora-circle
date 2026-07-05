@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DiasporaCircle — Ajo, without borders</title>
+<meta name="description" content="An open Soroban protocol for cross-border Ajo/Esusu savings circles. Contribute from anywhere, settle in seconds." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="brand">DiasporaCircle</span>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#why-stellar">Why Stellar</a>
+      <a href="https://github.com/baobab-chain/diaspora-circle" class="cta-ghost">View on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">Baobab Labs · Stellar Wave</p>
+      <h1>Ajo doesn't stop<br>at the border.</h1>
+      <p class="lede">
+        Rotating savings circles — the same trusted Ajo/Esusu your family
+        already runs — but a relative in London or Toronto can contribute
+        their turn in seconds, without a treasurer, without a wire fee
+        eating half the amount.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/baobab-chain/diaspora-circle" class="cta-primary">Read the protocol</a>
+        <a href="#how" class="cta-text">See how a round works ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg id="circle-diagram" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="180" cy="180" r="140" class="ring-track"/>
+        <g id="pot-group">
+          <circle cx="180" cy="180" r="46" class="pot"/>
+          <text x="180" y="176" class="pot-label">POT</text>
+          <text x="180" y="196" class="pot-amount">$400</text>
+        </g>
+        <g id="members"></g>
+      </svg>
+      <p class="visual-caption">Round 3 of 8 — member in Lagos receives this round's pot</p>
+    </div>
+  </section>
+
+  <section id="how" class="section">
+    <div class="wrap">
+      <p class="eyebrow">The mechanism</p>
+      <h2>Four steps, enforced by the contract — not a person</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">01</span>
+          <div>
+            <h3>Create a circle</h3>
+            <p>Fix the contribution amount, the member list, and the schedule. Members are invited — same trust model as a real Ajo group.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <div>
+            <h3>Contribute from anywhere</h3>
+            <p>Each member sends their share in XLM or USDC. A member in Abuja and a member in Houston both settle in seconds.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <div>
+            <h3>Funds held in escrow</h3>
+            <p>The contract holds the pot. No treasurer ever has custody of the group's money.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">04</span>
+          <div>
+            <h3>Automatic payout</h3>
+            <p>Once everyone has paid in, the pot releases to that round's recipient automatically. The circle advances to the next round.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="why-stellar" class="section section-alt">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Why not just use a bank transfer</p>
+        <h2>Because 15% in fees isn't a rounding error<br>when the contribution is $20</h2>
+        <p class="lede-small">
+          Traditional remittance rails were built for occasional large
+          transfers, not small recurring contributions to a family circle.
+          Stellar was built for exactly this.
+        </p>
+      </div>
+      <div class="stat-list">
+        <div class="stat"><span class="stat-num">~5s</span><span class="stat-label">settlement time</span></div>
+        <div class="stat"><span class="stat-num">&lt;$0.01</span><span class="stat-label">typical transaction fee</span></div>
+        <div class="stat"><span class="stat-num">USDC</span><span class="stat-label">stable-value option, no Naira volatility risk</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="wrap cta-band-inner">
+      <h2>The contract is open. The issues are open.<br>Come build it with us.</h2>
+      <a href="https://github.com/baobab-chain/diaspora-circle/blob/main/ISSUES.md" class="cta-primary cta-on-dark">See open issues</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Part of <a href="https://github.com/baobab-chain">Baobab Chain Labs</a> — open-source, built on Stellar. MIT licensed.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
