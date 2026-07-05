@@ -2,7 +2,7 @@
 
 **An open Soroban protocol for cross-border Ajo/Esusu (rotating savings and credit) circles.**
 
-Part of [Baobab Labs](https://github.com/baobab-labs) — built on [Stellar](https://stellar.org).
+Part of [Baobab Chain Labs](https://github.com/baobab-chain) — built on [Stellar](https://stellar.org).
 
 ---
 
