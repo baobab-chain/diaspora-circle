@@ -49,12 +49,34 @@ compiles and covers the core circle lifecycle, but it is **not audited and
 not production-ready**. See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
 for the current design and known gaps.
 
+## Repo layout
+
+- **`contracts/diaspora-circle/`** — the Soroban smart contract (Rust)
+- **`api/`** — a NestJS REST layer over the contract, for front-ends that don't want to embed Stellar SDK contract calls directly
+- **`web/`** — static landing page explaining the protocol
+
 ## Getting started
 
+**Contract:**
 ```bash
 # prerequisites: Rust, the soroban-cli
 cd contracts/diaspora-circle
 cargo build --target wasm32-unknown-unknown --release
+cargo test
+```
+
+**API:**
+```bash
+cd api
+npm install
+cp .env.example .env   # fill in CONTRACT_ID and SERVICE_ACCOUNT_SECRET
+npm run start:dev
+```
+
+**Landing page:**
+```bash
+cd web
+python3 -m http.server 8080
 ```
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how to run tests and submit changes.
